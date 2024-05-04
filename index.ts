@@ -4,7 +4,7 @@ import inquirer from 'inquirer';
 import chalk from 'chalk';
 
 console.log(chalk.cyan.italic.bold`*********************** "Greetings! Begin Your Transaction Here" ****************`);
-console.log(" ");
+
 const myBalance = 30000;
 const myPinCode = 3333;
 
@@ -18,7 +18,7 @@ const myPinCode = 3333;
 
     if (pinCode.input === myPinCode) {
         console.log(chalk.magentaBright`You Entered Correct Pin Code!`);
-        console.log("");
+        
         const operation = await inquirer.prompt([
             {
                 name: "operation",
@@ -65,7 +65,7 @@ const myPinCode = 3333;
         }
     } else {
         console.log(chalk.green.bold`Invalid Pin Code`);
-        console.log("");
+     
     };
     
 
